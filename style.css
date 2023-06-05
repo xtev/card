@@ -1,0 +1,159 @@
+:root {
+  --font_family: "Times New Roman", Times, serif;;
+  --font_size: 16px;
+  --background_color: #000;
+  --background_image: url("https://i.pinimg.com/originals/0b/5a/42/0b5a42f1eb216d045ee7955385db6f61.gif");
+  --image_width: 250px;
+  --image_height: 250px;
+  --title_color: #fff;
+  --svg_color: #fff;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font: var(--font_size) var(--font_family);
+  font-weight: 400;
+  line-height: 1.5;
+  background: var(--background_image) no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex_column_center {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex_row_center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex_no_wrap_row_center {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_img {
+  padding-top: 8em;
+}
+.header_img img {
+  height: var(--image_height);
+  width: var(--image_width);
+  border: var(--image_border_px) solid var(--image_border_color);
+  border-radius: 50%;
+  margin-bottom: 0.5em;
+}
+
+.header_text h1 {
+  color: var(--title_color);
+  font-size: 2.5em;
+}
+
+.header_text h2 {
+  color: var(--description_color);
+  font-size: 1.5em;
+}
+
+.header_svg_list {
+  padding-top: 1em;
+}
+
+.header_svg_item {
+  width: 2.1em;
+  height: 2.1em;
+  cursor: pointer;
+}
+
+.header_svg_item + .header_svg_item {
+  margin-left: 4em;
+}
+
+.header_svg_item svg {
+  fill: var(--svg_color);
+}
+
+#header_nav_menu_item_1 {
+  color: var(--menu_active_text_color);
+}
+
+#header_nav_menu_item_2,
+#header_nav_menu_item_3 {
+  color: var(--menu_text_color);
+}
+
+
+.header_nav_menu_list {
+  padding-top: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.header_nav_menu_item {
+  color: var(--menu_text_color);
+  background-color: var(--menu_background_color);
+  text-align: center;
+  list-style-type: none;
+  cursor: pointer;
+  padding: 0.5em;
+  border-radius: 0.3em;
+  cursor: pointer;
+  transition: 0.10s ease;
+  font-size: 1.1em;
+}
+
+.header_nav_menu_item + .header_nav_menu_item {
+  margin-left: 0.4em;
+}
+
+main {
+  margin-bottom: auto;
+}
+
+@media (max-width: 768px) { 
+  .main_text_item {
+    width: 92vw;
+  }
+
+  .main_small_button_item {
+    width: calc(92vw / 2 - 5px);;
+  }
+
+  .main_button_item {
+    width: 92vw;
+  }
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, button, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
